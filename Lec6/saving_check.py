@@ -8,6 +8,10 @@ while saving < TARGET:
     days += 1
     deposit = float(input("Please enter your daily deposit: "))
     saving += deposit
+
+    if saving > TARGET:
+        break
+
     print(f"Current saving: {saving}")
     print(f"Saving left until target: {TARGET - saving}")
     print(f"Days passed since first saving: {days}")
