@@ -1,0 +1,80 @@
+rephaze@arch-vm CN101 on  master [?] took 39s ❯ ./Lec10/list.py
+What operation do you want to do
+1: Append item to list.
+2: Insert item to list.
+3: Search item in the list
+4: Show item in the list
+0: Exit the program
+Enter operation: 1
+Your choice is 1
+Enter Student ID: asdgf
+Append success
+What operation do you want to do
+1: Append item to list.
+2: Insert item to list.
+3: Search item in the list
+4: Show item in the list
+0: Exit the program
+Enter operation: 1
+Your choice is 1
+Enter Student ID: ashdfujh1
+Append success
+What operation do you want to do
+1: Append item to list.
+2: Insert item to list.
+3: Search item in the list
+4: Show item in the list
+0: Exit the program
+Enter operation: 1
+Your choice is 1
+Enter Student ID: hadjshfklhsdafk
+Append success
+What operation do you want to do
+1: Append item to list.
+2: Insert item to list.
+3: Search item in the list
+4: Show item in the list
+0: Exit the program
+Enter operation: 1
+Your choice is 1
+Enter Student ID: hajsdhfkjh
+Append success
+What operation do you want to do
+1: Append item to list.
+2: Insert item to list.
+3: Search item in the list
+4: Show item in the list
+0: Exit the program
+Enter operation: 2
+Your choice is 2
+Enter Student ID: ajkdshfkl
+Enter index: 3
+Insert Student ID ajkdshfkl at index 3 success
+What operation do you want to do
+1: Append item to list.
+2: Insert item to list.
+3: Search item in the list
+4: Show item in the list
+0: Exit the program
+Enter operation: 4
+Your choice is 4
+['asdgf', 'ashdfujh1', 'hadjshfklhsdafk', 'ajkdshfkl', 'hajsdhfkjh']
+What operation do you want to do
+1: Append item to list.
+2: Insert item to list.
+3: Search item in the list
+4: Show item in the list
+0: Exit the program
+Enter operation: 3
+Your choice is 3
+Enter item: asdgf
+Student asdgf is at index 0
+What operation do you want to do
+1: Append item to list.
+2: Insert item to list.
+3: Search item in the list
+4: Show item in the list
+0: Exit the program
+Enter operation: 0
+Your choice is 0
+Exiting
