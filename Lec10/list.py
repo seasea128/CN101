@@ -17,14 +17,27 @@ def print_operation():
     print("8: Reverse list")  # Implemented
     print("9: Find min, max, sum, and average")
     print("10: Compare between two values")
+    print("11: Search and replace name/lastname")  # TODO: Implement this
     print("0: Exit the program")
 
 
+def search_and_replace():
+    search_type = (
+        int(input("Enter variable to search for (1 = First Name, 2 = Last Name): ")) - 1
+    )
+    search_query = input("Enter name to search for: ")
+    replace = input("Enter name to replace: ")
+    for row in students:
+        name = row[1].split(" ")
+        if name[search_type].find(search_query) != -1:
+            row[1] = row[1].replace(search_query, replace)
+            break  # Only change first record it found
+
+    print(students)
+
+
 def append_item():
-    id = int(input("Enter Student ID: "))
-    name = input("Enter name: ")
-    gpa = float(input("Enter GPA: "))
-    student = [id, name, gpa]
+    student = input("Enter data (format: ID,Name,GPA): ").split(",")
     for row in students:
         if row[0] == student[0]:
             print(f"Duplicate Student ID at index {students.index(row)}")
@@ -35,10 +48,7 @@ def append_item():
 
 
 def insert_item():
-    id = int(input("Enter Student ID: "))
-    name = input("Enter name: ")
-    gpa = float(input("Enter GPA: "))
-    student = [id, name, gpa]
+    student = input("Enter data (format: ID,Name,GPA): ").split(",")
     for row in students:
         if row[0] == student[0]:
             print(f"Duplicate Student ID at index {students.index(student)}")
@@ -50,6 +60,16 @@ def insert_item():
 
 
 def search():
+    type = int(input("Enter variable to search (1=ID, 2=Name, 3=GPA): "))
+    if type == 1:
+        search_by_id()
+    elif type == 2:
+        search_by_name()
+    elif type == 3:
+        search_by_gpa()
+
+
+def search_by_id():
     id = int(input("Enter Student ID: "))
     for row in students:
         if row[0] == id:
@@ -57,6 +77,30 @@ def search():
             print(f"Student ID: {id} is at index {item}")
         else:
             print(f"Student does not exist")
+
+
+def search_by_name():
+    name = input("Enter name: ").lower()
+    for row in students:
+        if row[1].lower() == name:
+            item = students.index(row)
+            print(f"Name: {name} is at index {item}")
+        else:
+            print(f"Student does not exist")
+
+
+def search_by_gpa():
+    [gpa_min, gpa_max] = input("Enter GPA range split by comma: ").split(",")
+    output = []
+    for row in students:
+        if row[2] < gpa_max & row[2] > gpa_min:
+            output.append(row)
+
+    if len(output) == 0:
+        print("No student found")
+        return
+
+    print(f"Result: {output}")
 
 
 def print_list():
@@ -251,6 +295,8 @@ while choice != 0:
         sum_min_max_gpa()
     elif choice == 10:
         compare()
+    elif choice == 11:
+        search_and_replace()
     elif choice == 0:
         print("Exiting")
         break

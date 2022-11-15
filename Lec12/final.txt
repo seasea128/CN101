@@ -1,0 +1,5 @@
+short ans = 15 x 1 = 15
+short question = 4 x 5 = 20
+(function, list, string, etc)
+long question = 1 x 10 = 10
+(function + list + string)
