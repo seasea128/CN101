@@ -31,7 +31,7 @@ def search_and_replace():
         name = row[1].split(" ")
         if name[search_type].find(search_query) != -1:
             row[1] = row[1].replace(search_query, replace)
-            break  # Only change first record it found
+            break  # Only change first record found
 
     print(students)
 
@@ -93,7 +93,7 @@ def search_by_gpa():
     [gpa_min, gpa_max] = input("Enter GPA range split by comma: ").split(",")
     output = []
     for row in students:
-        if row[2] < gpa_max & row[2] > gpa_min:
+        if row[2] < float(gpa_max) & row[2] > float(gpa_min):
             output.append(row)
 
     if len(output) == 0:

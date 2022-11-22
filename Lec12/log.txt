@@ -1,0 +1,51 @@
+rephaze@arch-vm CN101 on  master [!?] ❯ Lec12/quiz2.py
+1. Add
+2. Search
+3. Edit
+4. Calculate Age
+5. Show information
+Enter selection: 1
+Enter info (format: ID, name, last name, dob, phonenumber): 1,test,test,12/dec/2000,123456789
+Add success
+1. Add
+2. Search
+3. Edit
+4. Calculate Age
+5. Show information
+Enter selection: 2
+Enter ID to search with1
+Result: ['1', 'test', 'test', '12/dec/2000', '123456789']
+1. Add
+2. Search
+3. Edit
+4. Calculate Age
+5. Show information
+Enter selection: 3
+Enter the index of record you want to edit: 0
+Enter info (format: ID, name, last name, dob, phonenumber): 1,asdf,zxvc,12/mar/2020/12342134
+Input invalid: not according to format
+1. Add
+2. Search
+3. Edit
+4. Calculate Age
+5. Show information
+Enter selection: 4
+Enter the index of record you want to calculate age: 0
+Age: 22
+1. Add
+2. Search
+3. Edit
+4. Calculate Age
+5. Show information
+Enter selection: 5
+Enter index of the record: 0
+test test DOB: **/dec/20* Phone number: 123456***
+1. Add
+2. Search
+3. Edit
+4. Calculate Age
+5. Show information
+Enter selection: ^CTraceback (most recent call last):
+  File "/home/rephaze/CN101/Lec12/quiz2.py", line 84, in <module>
+    choice = int(input("Enter selection: "))
+KeyboardInterrupt
